@@ -1,0 +1,110 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  text-align: center;
+  padding: 15px;
+  font-size: 20px;
+}
+th {
+  background-color: #5499C7;
+  color: white;
+  font-style: bold;
+  font-size: 35px;
+}
+.header {
+  background-color: #5499C7;
+  color: white;
+  font-style: bold;
+  font-size: 35px;
+
+}
+input{
+  height: 35px;
+  font-size: 15px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  text-align: center;
+  padding: 15px;
+  font-size: 20px;
+}
+th {
+  background-color: grey;
+  color: white;
+  font-style: bold;
+  font-size: 35px;
+}
+.header {
+  background-color: grey;
+  color: black;
+  font-style: bold;
+  font-size: 35px;
+}
+.letter {
+  width: 35px;
+  height: 20px;
+}
+.bottom { 
+  margin: 60px;
+}
+.top { 
+  margin-top: 60px;
+}
+.logo { 
+  display: block;
+  text-align: left;
+  float: left;
+  width: 330px;
+  height: 222px;
+  margin-left: 140px;
+}
+.text {
+  width: 750px;
+  text-align: left;
+  font-family: 'Quicksand', sans-serif;
+}
+.box {
+  background-color: grey;
+  font-size: 14px;
+  text-align: center;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  font-family: Verdana;
+  margin-top: 100px;
+  margin-bottom: 6rem;
+  float: center;
+
+}
+.boxText {
+  margin-top: 17px;
+  font-family: 'Quicksand', sans-serif;
+}
+.navbar {
+  margin-left: 160px;
+  margin-right: 160px;
+  margin-top: 242px;
+}
+.container {
+margin-top: 30px;
+}
+
+.mail {
+margin-right: 163px;
+}
+.link {
+  color: black;
+}
+.long-text {
+	display: none
+}
+.photo{
+  width: 320px;
+  height: 280px;
+  float: right; 
+}

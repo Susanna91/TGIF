@@ -1,0 +1,102 @@
+input{
+    height: 35px;
+    font-size: 15px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    text-align: center;
+    padding: 15px;
+    font-size: 17px;
+  }
+  th {
+    background-color: grey;
+    color: white;
+    font-style: bold;
+    font-size: 35px;
+  }
+  .tableHeader {
+    font-size: 18px;
+    text-align: center 
+  }
+  .header {
+    background-color: grey;
+    color: black;
+    font-style: bold;
+    font-size: 35px;
+  
+  }
+  .houses {
+    font-size: 17px;
+  }
+  .letter {
+    width: 35px;
+    height: 20px;
+  }
+  .bottom { 
+    margin: 60px;
+  }
+  .top { 
+    margin-bottom: -27px;
+  }
+  .logo { 
+    display: block;
+    text-align: left;
+    float: left;
+    width: 330px;
+    height: 222px;
+    margin-left: 140px;
+  }
+
+  .box {
+    background-color: grey;
+    font-size: 14px;
+    text-align: center;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    font-family: Verdana;
+    margin-top: 15px;
+    margin-bottom: 6rem;
+    float: center;
+    margin-left: 160px;
+    margin-right: 160px;
+  
+  }
+  .boxText {
+    margin-top: 17px;
+    font-family: 'Quicksand', sans-serif;
+  }
+  .navbar {
+    margin-left: 160px;
+    margin-right: 160px;
+    margin-top: 242px;
+  }
+  .container {
+    margin-top: 30px;
+  }
+  .mail {
+    margin-right: 163px;
+    }
+  .link {
+      color: black;
+  }
+
+  .filters {
+    display: flex;
+    justify-content: space-between;
+  }
+  .row1 {
+    margin-left: 144px;
+    margin-right: 144px;
+    display: flex;
+    justify-content: space-around;
+  } 
+  .row2 {
+    margin-left: 144px;
+    margin-right: 144px;
+    display: flex;
+    justify-content: space-around;
+  } 

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue CDN</title>
+    <link rel="stylesheet" href="styles/house.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="all" id="app">
+    <div class="title">
+        <p class="top"></p> 
+        <img src="TGIF.png" class="logo">
+        <p class="bottom"></p> 
+        <div class="mail" style="display:block; text-align:right;"><img src="letter.png" class="letter">
+        <a class="link" href="mailto:info@tgif.net?subject=Reaching%20Out&body=How%20are%20you">info@tgif.net</a></div>
+        <p class="bottom"></p> 
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="home-data.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Congress 113
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="house-data.html">House</a>
+                <a class="dropdown-item" href="senate-data.html">Senate</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      Attendance
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="house_attendance.html">House</a>
+                      <a class="dropdown-item" href="senate_attendance.html">Senate</a>
+                    </div>
+            </li>
+            <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                      Party Loyalty
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="house_party-loyalty.html">House</a>
+                      <a class="dropdown-item" href="senate_party-loyalty.html">Senate</a>
+                    </div>
+            </li>
+          </ul>
+        </nav>
+        <br>
+
+    </div>
+    <div class="container">
+        <div class="table-responsive">
+            <h1>Congressmen</h1>
+            <br/>
+            <div class="text">
+            <p>The major power of the House is to pass federal legislation that affects the entire country, although its bills must also be passed by the Senate and further agreed to by the U.S. President before becoming law (unless both the House and Senate re-pass the legislation with a two-thirds majority in each chamber). The House has some exclusive powers: the power to initiate revenue bills, to impeach officials (impeached officials are subsequently tried in the Senate), and to elect the U.S. President in case there is no majority in the Electoral College.</p>
+            </div>
+            <div class="text1">
+            <p>Each U.S. state is represented in the House in proportion to its population as measured in the census, but every state is entitled to at least one representative.</p>
+            </div>
+            <p class="bottom"></p>
+
+
+            <div class="filters">
+                    <div class="checkbox_container">Filter by Party:
+                        <input type="checkbox" id="d_checkbox" value="D" v-model="checkedParty" @change="filterAll()">
+                        <label>Democrat</label>
+                        <input type="checkbox" id="r_checkbox" value="R" v-model="checkedParty" @change="filterAll()">
+                        <label>Republican</label>
+                        <input type="checkbox" id="i_checkbox" value="I" v-model="checkedParty" @change="filterAll()">
+                        <label>Independent</label>
+                        <p>Checked Parties: {{ checkedParty }}</p>
+                    </div>
+
+
+                    <form name="filter" id="statefilter" action="" method="">
+                            <select id="allStates" class="filter" @change="filterAll()" v-model="selected">
+                              <option value="all">--All--</option>
+                              <option v-for= "state of states" :value="state">{{ state }}</option>
+                            </select>
+                            <p>{{ selected }}</p>
+                        </form> State</th>
+                      </div> 
+
+
+                      <table class="table table-borderless table-striped">
+                            <thead class="thead-light">
+                                    <tr class="header">
+                                    <th class="tableHeader">Name</th>
+                                    <th class="tableHeader">Party</th>
+                                    <th class="tableHeader">State</th>
+                                    <th class="tableHeader">Years in Office</th>
+                                    <th class="tableHeader">%Votes w/Party</th>
+                                    </tr>
+                                    </thead>
+                  </div>
+                    </div>
+                
+                        <tbody id="house-data">
+                            <div>
+                            <tr v-for="member in members">
+                                <td><a :href= "member.url">{{member.first_name}} {{member.middle_name}} {{member.last_name}}</a></td> 
+                                <td>{{member.party}}</td>
+                                <td>{{member.state}}</td>
+                                <td>{{member.seniority}}</td>
+                                <td>{{member.votes_with_party_pct}}</td>
+                      </tr>
+                            </div>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            
+                <div class="box">
+                  <p class="boxText">@ TGIF 2016 | All Rights Reserved</p>
+                </div>
+                </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>    
+<script src="pro-congress-115-house.js"></script>
+<script src="house_vue.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
